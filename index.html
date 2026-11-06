@@ -1,81 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MANIAC.EXE</title>
+<title>Page Title</title>
 </head>
-<body style=" background-color: Black; background-image: url(https://static.vecteezy.com/system/resources/previews/035/729/579/non_2x/abstract-technology-binary-code-background-digital-binary-data-and-secure-data-concept-vector.jpg);
+<body style=" background-color: Black; background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/97/Female_breasts.png?);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 ">
- 
- 
-<h1 style="
-font-size: 40px;
-color: white;
-font-family: 'Lucida Console', monospace;
-text-align: center;
-">
-Este es un sitio Hackeado
-</h1>
- 
-<p style="
-color: white;
-font-family: 'Lucida Console', monospace;
-text-align: center;
-">
-Te voy a meter las ideas.
-</p>
 <div style="
-text-align: center;
+display: grid;
+grid-template-columns: repeat(4, 200px);
+justify-content: center;
+gap: 135px;
+margin-top: 100px;
+margin-bottom: 90px;
 ">
- 
-<div style="text-align: center;">
- 
-<img src="https://images.meme-arsenal.com/3d4268f8d9d5813359b63fd0c24da75d.jpg"
-style="display: block; margin: 20px auto;">
- 
-<img src="https://media.tenor.com/ccu3Klw0yowAAAAM/jeff.gif"
-style="display: block; margin: 20px auto;">
- 
-<a href="https://youtu.be/1fo8yKkm24o"
-style="
-display: inline-block;
-color: lime;
-font-size: 20px;
-font-family: 'Lucida Console', monospace;
-text-decoration: none;
-margin-top: 10px;
-">
-NO_TE_METAS
-</a>
- 
+
+<img onclick="abrirVideo('video1.MP4')" src="https://i.pinimg.com/736x/66/3a/0f/663a0fedb34029485c713e5414c8038f.jpg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video2.MP4')" src="https://i.pinimg.com/736x/7d/92/06/7d9206ea59107a9392f1865133508a86.jpg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video3.MP4')" src="https://i.pinimg.com/736x/d5/09/d6/d509d6d786d589ce68ce264b91ee15ae.jpg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video4.MP4')" src="https://i.pinimg.com/474x/65/97/12/659712e15eacf2c2db86b23fe94c04fb.jpg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video5.MP4')" src="https://wallpaper.forfun.com/fetch/2e/2e14f0d5fbb35bb89eb45be49201708f.jpeg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video6.MP4')" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxOqDCgZw8-zyhzbgNgoGV6fmUMzzhY2NJhpwgh0Iyg&s=10" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video7.MP4')" src="https://i.pinimg.com/736x/35/cc/cf/35cccf86ff4648d7c96d5e0acbc7b68b.jpg" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
+<img onclick="abrirVideo('video8.MP4')" src="https://i.pinimg.com/474x/08/fd/51/08fd510b4090b1f2ade5cb537260389e.jpg?nii=t" style="width: 280px; height: 190px; object-fit: cover; cursor: pointer;">
+
 </div>
-<!-- Logo de Instagram con texto -->
-<div style="
+
+<!-- Ventana del video -->
+
+<div id="ventanaVideo" style="
+display: none;
 position: fixed;
-bottom: 10px;
-left: 10px;
-display: flex;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+justify-content: center;
 align-items: center;
-gap: 10px;
+z-index: 999;
 ">
- 
-<img src="https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logosu.png"
-style="
-width: 60px;
-height: auto;
+
+<div style="text-align: center;">
+
+<video id="reproductor" controls style="
+width: 80%;
+max-width: 700px;
 ">
- 
-<p style="
-color: white;
+
+</video>
+
+<br><br>
+
+<button onclick="cerrarVideo()" style="
+padding: 10px 25px;
+background: lime;
+color: black;
 font-family: 'Lucida Console', monospace;
-font-size: 16px;
+cursor: pointer;
 ">
-Emi.nnano
-</p>
-<a href="2P.html"
+CERRAR VIDEO
+</button>
+
+</div>
+</div>
+
+<script>
+
+function abrirVideo(archivo) {
+    var ventana = document.getElementById("ventanaVideo");
+    var video = document.getElementById("reproductor");
+
+    video.src = archivo;
+    ventana.style.display = "flex";
+    video.play();
+}
+
+function cerrarVideo() {
+    var ventana = document.getElementById("ventanaVideo");
+    var video = document.getElementById("reproductor");
+
+    video.pause();
+    video.src = "";
+    ventana.style.display = "none";
+}
+
+</script>
+
+<a href="1P.html"
 style="
 position: fixed;
 bottom: 20px;
@@ -85,8 +107,7 @@ font-size: 20px;
 font-family: 'Lucida Console', monospace;
 text-decoration: none;
 ">
-IR A PAGINA 2
+REGRESAR A PAGINA 1
 </a>
-</div>
-</body >
+</body>
 </html>
